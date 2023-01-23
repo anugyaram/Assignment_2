@@ -12,12 +12,15 @@ import NotFound from './pages/NotFound';
 import Home from './pages/Home';
 import About from './pages/About';
 import Blog from './pages/Blog';
+import Header from './components/Header';
 
 
 function App() {
   return (
     <BrowserRouter>
     <ToastContainer />
+    <div className='App'>
+      <Header />
     <Routes>
       <Route path='/' element={<Home />}></Route>
       <Route path='/addBlog' element={<AddEditBlog />}></Route>
@@ -26,6 +29,7 @@ function App() {
       <Route path='/blog/:id' element={<Blog />}></Route>
       <Route path='*' element={<NotFound />}></Route>
     </Routes>
+    </div>
     </BrowserRouter>
 
   );
